@@ -1,4 +1,5 @@
 import random
+import email_myself
 
 def main():
     # Debugging only
@@ -13,6 +14,8 @@ def main():
     totalCount = 0
     uniqueCount = 0
     randNum = 0
+    contentList = []
+    contentString = ""
 
     with open('tags.txt','r') as f:
         for line in f:
@@ -27,14 +30,21 @@ def main():
 
     uniqueList = list(tags)
 
+    # For the number of hashtags we want
     for x in range (0, hashNum):
         randNum = random.randint(0,(len(uniqueList) - 1))
         if debug == 1:
             print("Index is ", randNum)
-        print(uniqueList[randNum])
 
+        # Let's generate the actual hashtag list
+        contentList.append(uniqueList[randNum])
+
+    # convert list into string for function call and call e-mail fn
+    content = ' '.join(contentList)
+    email_myself.email_hashtags(content)
 
     if debug == 1:
+        print(content)
         print("The total count is", totalCount)
         print("The unique count is", uniqueCount)
 
