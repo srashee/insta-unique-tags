@@ -9,3 +9,11 @@ of N unique hashtags from a list and have them e-mailed to me
 ## usage
 if you want to use this, replace tags.txt with tags you want <br/>
 python3 tags.py
+
+You must have a file in parent directory called info.txt
+with encoded username and password such as
+
+testuser
+testpass
+
+Remember it must be Base64Encoded
