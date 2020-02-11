@@ -13,7 +13,7 @@ python3 tags.py
 You must have a file in parent directory called info.txt
 with encoded username and password such as
 
-testuser
-testpass
+email </br>
+applicationPassword
 
 Remember it must be Base64Encoded
