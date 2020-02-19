@@ -1,5 +1,6 @@
 import random
 import email_myself
+from random import randrange
 
 def main():
     # Debugging only
@@ -9,7 +10,9 @@ def main():
     tags = set()
 
     # Number of hashtags to use
-    hashNum = 18
+    hashNum = 22
+    randNum = randrange(4)
+    hashNum = hashNum + randNum
 
     totalCount = 0
     uniqueCount = 0
